@@ -24,9 +24,6 @@ function App() {
     const repository = response.data;
     
     setRepositories([...repositories, repository]);
-
-    console.log(repositories);
-
   }
 
   async function handleRemoveRepository(id) {
