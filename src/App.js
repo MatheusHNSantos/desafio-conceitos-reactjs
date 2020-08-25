@@ -17,12 +17,15 @@ function App() {
     const response = await api.post('repositories', {
       title: `repository ${Date.now()}`,
       url: `https://github.com/MatheusHNSantos/repository-${Date.now()}`,
+      techs: ["ReactJS", "NodeJS"],
       likes: 0
     });
 
     const repository = response.data;
     
     setRepositories([...repositories, repository]);
+
+    console.log(repositories);
 
   }
 
